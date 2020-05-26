@@ -27,9 +27,9 @@
   "commands": {
     "toggle-feature-foo": {
       "suggested_key": {
-        "default": "Ctrl+Shift+Y",
-        "linux": "Ctrl+Shift+Y",
-        "mac": "Command+Shift+Y"
+        "default": "Ctrl+Shift+Z",
+        "linux": "Ctrl+Shift+Z",
+        "mac": "Command+Shift+Z"
       },
       "description": "Toggle feature foo"
     }
