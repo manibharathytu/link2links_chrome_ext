@@ -4,7 +4,7 @@
 //     "sample_setting": "This is how you use Store.js to remember values"
 // });
 
-MY_SERVER = "http://localhost/"
+MY_SERVER = "http://ec2-52-39-57-52.us-west-2.compute.amazonaws.com/"
 //example of using a message handler from the inject scripts
 chrome.extension.onMessage.addListener(
   function(request, sender, sendResponse) {
@@ -30,7 +30,12 @@ chrome.extension.onMessage.addListener(
 
       my_link = CryptoJS.MD5(my_link).toString();
       my_link = MY_SERVER + my_link
-      copyTextToClipboard(my_link)
+	  copyTextToClipboard(my_link)
+	  chrome.browserAction.setIcon({path:"../../icons/tick.png"});
+	  setTimeout(function(){
+		chrome.browserAction.setIcon({path:"../../icons/main.png"});
+	  },1000)
+
       // navigator.clipboard.writeText('basic bitch')
       // use `url` here inside the callback because it's asynchronous!
   });
