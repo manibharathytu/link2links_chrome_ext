@@ -1,9 +1,9 @@
 {
-  "name": "link2links",
+  "name": "Copy URLs",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
-  "homepage_url": "http://extensionizr.com",
+  "description": "This extension copies a bunch of URLs in current window and gives as shortened URL which when navigated will open all the URLs",
+  "homepage_url": "http://copyurls.ml",
   "icons": {
     "16": "icons/big.png",
     "48": "icons/big.png",

@@ -4,7 +4,7 @@
 //     "sample_setting": "This is how you use Store.js to remember values"
 // });
 
-MY_SERVER = "http://ec2-52-39-57-52.us-west-2.compute.amazonaws.com/"
+MY_SERVER = "http://copyurls.ml/"
 //example of using a message handler from the inject scripts
 chrome.extension.onMessage.addListener(
 	function (request, sender, sendResponse) {
