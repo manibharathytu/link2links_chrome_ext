@@ -19,10 +19,8 @@
     "default_title": "Copy URLs"
   },
   "permissions": [
-    "clipboardRead",
     "clipboardWrite",
     "tabs"
-    
   ],
   "commands": {
     "toggle-feature-foo": {
