@@ -1,31 +1,16 @@
-// if you checked "fancy-settings" in extensionizr.com, uncomment this lines
-
-// var settings = new Store("settings", {
-//     "sample_setting": "This is how you use Store.js to remember values"
-// });
-
 MY_SERVER = "http://copyurls.ml/"
-//example of using a message handler from the inject scripts
-chrome.extension.onMessage.addListener(
-	function (request, sender, sendResponse) {
-		console.log("bg js")
-		chrome.pageAction.show(sender.tab.id);
-		sendResponse();
-	});
+
 chrome.commands.onCommand.addListener(function (command) {
 	if (command === "toggle-feature-foo") {
 		onTriggerAction()
 	}
 });
 chrome.browserAction.onClicked.addListener(function (tab) {
-
-	// alert('icon clicked')
+// console.log(tab)
 	onTriggerAction()
 });
 
 function onTriggerAction() {
-	console.log(chrome.tabs)
-	// console.log(windows)
 	let my_link = []
 	chrome.tabs.query({
 		lastFocusedWindow: true
@@ -38,7 +23,6 @@ function onTriggerAction() {
 		$.ajax({
 			url: MY_SERVER + 'save/' + my_link,
 			success: function (result) {
-				console.log('ajax sucs')
 			}
 		});
 
@@ -53,9 +37,6 @@ function onTriggerAction() {
 				path: "../../icons/main.png"
 			});
 		}, 1000)
-
-		// navigator.clipboard.writeText('basic bitch')
-		// use `url` here inside the callback because it's asynchronous!
 	})
 }
 
@@ -85,9 +66,6 @@ function copyTextToClipboard(text) {
 	document.body.removeChild(copyFrom);
 }
 
-function arrayToString() {
-
-}
 
 
 
