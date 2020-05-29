@@ -1,38 +1,45 @@
 MY_SERVER = "http://copyurls.ml/"
 
+// For command triggering the action
 chrome.commands.onCommand.addListener(function (command) {
 	if (command === "toggle-feature-foo") {
 		onTriggerAction()
 	}
 });
+
+// Fpr icon click triggering the action
 chrome.browserAction.onClicked.addListener(function (tab) {
-// console.log(tab)
 	onTriggerAction()
 });
 
+// This function copies all tab urls in the current window
+// And squishes them into a small url. 
+// And copy it to the clipboard.
+// This function also stores the urls in cloud for sharability over the internet feature.
 function onTriggerAction() {
 	let my_link = []
 	chrome.tabs.query({
 		lastFocusedWindow: true
-	}, tabs => {
+	}, tabs => {	// get all tabs
 		for (i in tabs) {
-			my_link.push(tabs[i].url)
+			my_link.push(tabs[i].url) // get all urls
 		}
-		my_link = my_link.join(" ");
-		my_link = window.btoa(my_link) //base64 encoding
-		$.ajax({
+		my_link = my_link.join(" "); // make it string
+		my_link = window.btoa(my_link) //base64 encoding (for ease of handling)
+		
+		$.ajax({ // sending to the server to persist the map between squished url and the real urls
 			url: MY_SERVER + 'save/' + my_link,
 			success: function (result) {
 			}
 		});
 
-		my_link = CryptoJS.MD5(my_link).toString();
+		my_link = CryptoJS.MD5(my_link).toString(); // md5 hasing to squish the url
 		my_link = MY_SERVER + my_link
-		copyTextToClipboard(my_link)
-		chrome.browserAction.setIcon({
+		copyTextToClipboard(my_link) // copy the squished url to clipboard. so the user can paste it readily
+		chrome.browserAction.setIcon({ // set success icon
 			path: "../../icons/tick.png"
 		});
-		setTimeout(function () {
+		setTimeout(function () { // back to normal icon
 			chrome.browserAction.setIcon({
 				path: "../../icons/main.png"
 			});
@@ -40,6 +47,7 @@ function onTriggerAction() {
 	})
 }
 
+// This function copies given text to clipboard.
 function copyTextToClipboard(text) {
 	//Create a textbox field where we can insert text to. 
 	var copyFrom = document.createElement("textarea");
