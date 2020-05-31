@@ -2,7 +2,7 @@ MY_SERVER = "http://copyurls.ml/"
 
 // For command triggering the action
 chrome.commands.onCommand.addListener(function (command) {
-	if (command === "toggle-feature-foo") {
+	if (command === "copy-window-tabs") {
 		onTriggerAction()
 	}
 });

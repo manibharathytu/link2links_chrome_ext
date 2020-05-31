@@ -1,0 +1,252 @@
+THIS IS COPIED FROM /home/mani/Desktop/my_projects_or_workspaces/notebooks/productivity_tools/link_of_links.md
+
+https://www.producthunt.com/alternatives/multiple-url-opener
+
+/home/mani/Desktop/projects_or_workspaces/notebooks/Diary/May/Week 4/26.md
+
+https://github.com/manibharathytu/urls_shorten
+
+
+
+
+features analysis :
+
+todo features : 
+* all links new line seperated (adv : direct pasting by Alt+V in chrome, preserves all data, searchable, disad : clumsy to handle, big and multiple line), 
+* all links space seperated (comes in one line, all datapreserved and searchable but still its not one clickable link or easily sharable),
+* all links query params or some kind of concatenation (so that behave as one link with all info preserved and searchable, still big and clumsy), 
+* one link base64 encoded (one link, non clumsy, preserves data, disad : non searchable immediately, partial reliance on ext or server to get the links, still he can do base64 decoding and findout), 
+* one shortened link (non clumsy, easy to handle, no data preservation in the link itself , non searchable. completely dependant on the extn or server to make it work)
+
+
+todo features : 
+* how to tab select links instead of window.
+ * how to manual pasting links and create a link2links. 
+ * Check for any standard on this link to links thing
+
+
+the current mthod will fail once the url reaches 1024 char. it will reach once there are say 10 links.
+
+feature : persiste links in groups to view. like bookmarks.
+
+feature : when there are more number of links opening all is a bad idea. instead can be shown in a page given option to open any one or all of them or select and open.
+
+the above sounds like the a global bookmarks. Its like sharing amazon shoppinglist (not sure if anyone using that). Its global bookmarks
+
+todo : extension respond locally feature.
+todo : extension put it in chrome extension store.
+todo: how to kickstart chrome extn, how to monitize chrome extn.
+
+-------------
+* Ctrl+Shft+C makes a lot of sense. Only for devs it will be a hindrance but they will manually change it.
+-------------------
+
+todo : extension should react by putticng a tick mark.
+todo: extension options page.
+todo : shortcut for chrome. can my extn register that short cut too.
+todo : extension respond locally feature.
+todo : extension put it in chrome extension store.
+todo: how to kickstart chrome extn, how to monitize chrome extn.
+
+todo: have some icon in your page sayings somthing funny or redirecting users to the next tab direction. or ads.OR better your own extn page.
+todo : fix empty page instead of not found text in case of wrong query  
+todo : have template in html file and replace  
+todo : host both server and also chrome extension for public use
+todo : names - tinyurl, shorten url, tiny multi url
+todo : have to find the procedures for submitting chrome extension to chrome marketplace.
+todo : find a way to search the links insed links (only way is to have all links concatenated and b)
+
+-----
+
+ chrome://extensions/shortcuts. -https://superuser.com/questions/497526/customize-google-chrome-keyboard-shortcuts
+
+ -------------
+ option to set default for windws open vs listing the links page.
+ 
+ option to disable default keyboard shortcut
+
+ with different shortcuts any custom setting can be on the go applied.
+
+ ------
+
+ Must refer Diary/May/Week 4/26.md
+
+ ------
+
+ names :
+ linkcopy, links copy
+ link share, links share
+multi url
+link2links
+tiny link, tiny url
+onelink
+tinylink.gq availbale
+glink.gq
+multilink available
+q,c,k,g - replaceable letters.
+
+my keywords copy, link has c and k respectively
+click can be my keyword.
+
+ favicon desgin.
+
+ ------
+
+ it can just be a hidden extension
+
+ --------
+
+ extn icon animation - rotationg and the draw the tick 
+ --
+
+ test the design look n feel. in dark mode , light mode appearances. different oses (win n mac)
+---
+
+it could even be hidden extn
+
+------
+
+to write in extn desc :
+
+chrome://extensions/shortcuts - shortcuts can be configured here. there is global to.
+
+-------
+In copyurls.ml homepage. give the manual utility of multi url to one short url
+Intelligent feature, using http start word.
+-------
+
+terms :
+shortcut
+single squished small short shareable url 
+
+--------
+
+add github
+use google url short
+try to usee chrome alkt+v and your extension and 3rd party url shortner. so no server at all
+-------
+
+demand:
+https://www.openmultipleurl.com/ https://www.google.com/search?q=multiple+urls+in+one+link&oq=multiple+urls+to+&aqs=chrome.3.69i57j0l5j69i60j69i61.9537j0j7&sourceid=chrome&ie=UTF-8 https://manylink.co/register https://linkr.in/ https://www.quora.com/Is-there-a-way-to-bundle-a-group-of-links-into-one-link http://faturl.com/ 
+
+supply :
+https://chrome.google.com/webstore/search/copy%20urls?hl=en&_category=extensions
+
+-------------
+bug or feature ;
+close the copyurls.ml tab
+If there are more than X tabs show the links (or iframes) in onpage and let user decide if he wants to open all or some or one
+
+-------
+
+extension current issues :
+* why it says https://i.imgur.com/a0TNLYG.png
+* why there are 6 screenshots. only first 4 is good.
+* very bad quality screenshots, not understandable.
+* why the title icon not coming.
+* author name and email would give more legit look.
+* support url.
+
+todo : Fix the presentation issues noted in sprint 9
+todo : use other url shortner
+todo : better short cut (ctrl+shft+c, ctrl+alt+c, shift+c ). change the command name foo to copy
+todo : more options --> all window tabs copy, url (multiple vs single vs shortned vs base 64),alias feature.
+todo : push this to webstore public. kickstart promo (kaushik, jv)
+
+-------
+
+https://i.imgur.com/VvzSfkS.png
+
+-------------
+names :
+https://i.imgur.com/nKqI8sm.png
+bulkurls instead of copyurls
+
+-------------
+
+status :
+its published i just dint get email. but still like yester
+
+-------------
+todo: unlimited, free, fast, url shortner (less than 10 chars), rebrandable, api support, permalink, trustable, alias. - https://www.google.com/search?q=branded+url+shortener+free&oq=branded+url+shortener+free+&aqs=chrome..69i57j0l3.14812j0j7&sourceid=chrome&ie=UTF-8
+features :
+locally save the map for tinyurl to the window urls (or base64)
+shareability (global url) on off
+alias enable or diable
+format : base64, full url data readable, squished
+window vs all windows vs selected
+shortcuts for enabling/disabling settings. shortcuts for diff settings apply for that action. eg: seperate shrtcuts for one window copy, all windows copy.
+
+pastebin vs tinyurl :
+pastebin can replace server for shareablility
+
+--
+freenom url
+
+--------
+
+support url
+privacy policy
+github url (both server and extension)
+author name and email
+
+https
+
+
+* In home page, I can give a utility to combine many links to one short link
+* more futures : option to open or list, all windows vs one vs selected.
+
+
+---------
+
+https://stackoverflow.com/questions/3073943/pastebin-but-for-html
+github gist is also there - https://gist.github.com/manibharathytu/296a6c8e39ca7663d7c32f1e6a8740ee.js
+
+
+pastebin, psate.ee, pastie.org
+cdn, 
+jsbin/jsfiddle
+
+--------
+
+features:
+their own subdomain in multlink.ml if they are a superuser or a prouser or frequent user or bulk user or enterprise
+include their username (in subdomain or path or )
+reduce hash size to 5-7 digits
+
+------------
+
+what to show in home page?
+multilink manual text area
+logo and some shameless plug or ads or link to our apps
+what everyone is saving right now
+the listing page
+
+---------------
+
+* Copy Urls is published. Able to add to chrome. But no idea why this page is still like https://i.imgur.com/HL14bs7.png
+* There are some more details - chrome://extensions/?id=lnpnppkgcbcpdooohiacfmbbjjhgpdpc - https://i.imgur.com/CFdJmof.png
+* It also asked for permission in alert while installing - 1) Read browsing history, Modifiy anything they copy/paste
+* monitizing extension - [this one is so good](https://www.nichepursuits.com/sell-google-chrome-extension/) , https://developer.chrome.com/webstore/money , https://i.imgur.com/psBEyrw.png
+* https://i.imgur.com/hjp92yI.png
+  
+8:00
+
+## Sprint 8
+
+* https://chrome.google.com/webstore/detail/sell-browser-extension/kaileaplmajaedpfcjaoabacekmaibea - https://sellext.com/
+
+-------
+
+instead of tick, why not a thumbs up
+
+------
+why webstore stats not showing anything
+
+---------
+
+right now all the works should be done by the cust facing guy :
+screenshots
+rebranding (multlink domname, multlink log design, icons design)
+better shortcuts
+more features on options (product design)

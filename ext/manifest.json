@@ -23,13 +23,11 @@
     "tabs"
   ],
   "commands": {
-    "toggle-feature-foo": {
+    "copy-window-tabs": {
       "suggested_key": {
-        "default": "Ctrl+Shift+Z",
-        "linux": "Ctrl+Shift+Z",
-        "mac": "Command+Shift+Z"
+        "default": "Alt+C"
       },
-      "description": "Toggle feature foo"
+      "description": "Copy"
     }
   }
   
