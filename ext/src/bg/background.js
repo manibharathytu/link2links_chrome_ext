@@ -1,4 +1,4 @@
-MY_SERVER = "http://copyurls.ml/"
+MY_SERVER = "http://multlink.ml/"
 
 // For command triggering the action
 chrome.commands.onCommand.addListener(function (command) {
