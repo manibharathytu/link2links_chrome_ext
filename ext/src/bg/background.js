@@ -12,6 +12,10 @@ chrome.browserAction.onClicked.addListener(function (tab) {
 	onTriggerAction()
 });
 
+chrome.browserAction.setTitle({
+    title:'Alt + C'
+});
+
 // This function copies all tab urls in the current window
 // And squishes them into a small url. 
 // And copy it to the clipboard.
@@ -46,7 +50,7 @@ function onTriggerAction() {
 
 		setTimeout(function () { // back to normal icon
 			chrome.browserAction.setIcon({
-				path: "../../icons/main.png"
+				path: "../../icons/128.png"
 			});
 		}, 1000)
 	})
