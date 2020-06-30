@@ -31,4 +31,13 @@ be like this guy - https://chrome.google.com/webstore/detail/lightshot-screensho
     Description permissions
     screenshots and promo
 
+    -----------------
+
+    June 30 :
+implement cancel server req only when copy exist in client
+front page close,
+ console log remove ,
+  title as the url name for identification
+
+
 

@@ -1,4 +1,4 @@
-MY_SERVER = "http://multlink.ml/"
+MY_SERVER = "https://multlink.ml/"
 
 // For command triggering the action
 chrome.commands.onCommand.addListener(function (command) {
@@ -13,25 +13,39 @@ chrome.browserAction.onClicked.addListener(function (tab) {
 });
 
 chrome.browserAction.setTitle({
-    title:'Alt + C'
+	title: 'Alt + C'
 });
 
+chrome.webRequest.onBeforeRequest.addListener(
+	function (details) {
+		console.log(details)
+		let url = details.url
+		let notSaveReq = url.indexOf("/save/")==-1
+		if(notSaveReq)		openLinksFromSyncStorage(url.substring(url.lastIndexOf('/')+1))
+		return {cancel: notSaveReq };
+	}, {
+		urls: ["*://multlink.ml/*"]
+	},
+	["blocking"]
+);
 // This function copies all tab urls in the current window
 // And squishes them into a small url. 
 // And copy it to the clipboard.
 // This function also stores the urls in cloud for sharability over the internet feature.
 function onTriggerAction() {
-	let my_link = []
+
+	let my_links = []
+	let my_link = ""
 
 	chrome.tabs.query({
 		lastFocusedWindow: true
 	}, tabs => { // get all tabs
 
 		for (i in tabs) {
-			my_link.push(tabs[i].url) // get all urls
+			my_links.push(tabs[i].url) // get all urls
 		}
 
-		my_link = my_link.join(" "); // make it string
+		my_link = my_links.join(" "); // make it string
 		my_link = window.btoa(my_link) //base64 encoding (for ease of handling)
 
 		$.ajax({ // sending to the server to persist the map between squished url and the real urls
@@ -40,6 +54,9 @@ function onTriggerAction() {
 		});
 
 		my_link = CryptoJS.MD5(my_link).toString(); // md5 hasing to squish the urls
+
+		saveInSyncStorage(my_link, my_links)
+
 		my_link = MY_SERVER + my_link // make internet accessible short url.
 
 		copyTextToClipboard(my_link) // copy the squished url to clipboard. so the user can paste it readily
@@ -54,6 +71,28 @@ function onTriggerAction() {
 			});
 		}, 1000)
 	})
+}
+
+function openLinksFromSyncStorage(key){
+	// chrome.tabs.query({currentWindow: true, active: true}, function(tabs){
+	// 	console.log(tabs[0].url);
+	// 	window.close()
+	// });
+	chrome.storage.sync.get(key, function(result) {
+
+		result[key].forEach(function(url){
+			window.open(url)
+		})
+	  });
+	  window.url
+}
+
+function saveInSyncStorage(my_link, my_links){
+	let obj ={}
+	obj[my_link] = my_links
+	chrome.storage.sync.set(obj, function() {
+		console.log('Value is set to ' + my_links);
+	  });
 }
 
 // This function copies given text to clipboard.

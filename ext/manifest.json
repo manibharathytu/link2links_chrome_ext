@@ -20,7 +20,11 @@
   },
   "permissions": [
     "clipboardWrite",
-    "tabs"
+    "tabs",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.multlink.ml/"
   ],
   "commands": {
     "copy-window-tabs": {

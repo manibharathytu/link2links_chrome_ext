@@ -21,6 +21,14 @@ app site (hosted application site)
 github
 support 
 privacy page 
-
+chrome extn url in context menu *(manifest home_url)
+landing page?
 --------
 
+
+TODO:
+
+save all (created, navigated or sync all?) links locally
+sync all links with subdomain(or path)?
+their own shortened url service.
+tldrify gives share

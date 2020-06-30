@@ -1,0 +1,10 @@
+https://www.google.com/search?newwindow=1&sxsrf=ALeKk032vIWpHHOjcw8HXOAp2tb8J2DJ_g%3A1592641403923&ei=e8ftXuvmN_aG4-EP6cQY&q=%22multlink%22+extension&oq=%22multlink%22+extension&gs_lcp=CgZwc3ktYWIQAzIHCCMQsAIQJzIGCAAQDRAeOg4IABCwAxCKAxDlAhCLA1DFUljmZWCfaGgDcAB4AIABdIgB1gGSAQMxLjGYAQCgAQGqAQdnd3Mtd2l6uAEC&sclient=psy-ab&ved=0ahUKEwirkIrJ-4_qAhV2wzgGHWkiBgAQ4dUDCAw&uact=5
+
+
+
+todo :
+no pickle db (instead tinurl). no b64
+npm restart
+cloud storage can be an option
+
+persistence : let users know that the links are stored in chrome sync storage so the links they create and they vist also cached. It is also stored in shortened url.
