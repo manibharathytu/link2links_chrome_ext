@@ -1,6 +1,6 @@
 {
   "name": "MultLink (copy all urls)",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "manifest_version": 2,
   "description": "Copy all the URLs in the window and to a shortened URL.",
   "homepage_url": "https://chrome.google.com/webstore/detail/copy-urls/lnpnppkgcbcpdooohiacfmbbjjhgpdpc",
